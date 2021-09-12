@@ -1,0 +1,31 @@
+<?php
+echo "<h3> String Functions</h3><hr>";
+echo "<h3> String Function => is_string()</h3>";
+$str = "    Mohsen ghorbani jeGALi behDAni   ";
+$str1 = 8;
+$str2 = "mohsen\nGhorbani\njegali\nbehdani";
+echo is_string($str);
+echo "<hr><hr><h3> String Function => strlen()</h3>";
+echo strlen($str);
+echo "<hr><hr><h3> String Function => lcfirst()</h3>";
+echo lcfirst($str);
+echo "<hr><hr><h3> String Function => ucfirst()</h3>";
+echo ucfirst($str2);
+echo "<hr><hr><h3> String Function => ucwords()</h3>";
+echo ucwords($str);
+echo "<hr><hr><h3> String Function => strtoupper()</h3>";
+echo strtoupper($str);
+echo "<hr><hr><h3> String Function => strtolower()</h3>";
+echo strtolower($str);
+echo "<hr><hr><h3> String Function => ltrim()</h3>";
+echo ltrim($str2, "moh");
+echo "<hr><hr><h3> String Function => rtrim()</h3>";
+echo rtrim($str2, "bani");
+echo "<hr><hr><h3> String Function => trim()</h3>";
+echo trim($str)."<br>"; #clean whitespace, use in security in form
+echo trim($str2, "mohdani");
+echo "<hr><hr><h3> String Function => nl2br()</h3>";
+echo nl2br($str2);
+echo "<hr><hr><h3> String Function => number_format()</h3>";
+$number = 788695543000999;
+echo number_format($number);
