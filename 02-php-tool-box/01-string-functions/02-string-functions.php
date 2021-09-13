@@ -4,7 +4,7 @@ echo "<h3> String Function => explode()</h3>";
 $str = "Hello world. It's a beautiful day. بر اساس فضای خالی";
 print_r(explode(" ", $str));
 echo "<hr><hr><h3> String Function => implode()</h3>";
-$arr = ['خوش آمدید','شما','بر','درود',];
+$arr = ['خوش آمدید', 'شما', 'بر', 'درود',];
 echo implode(" <= ", $arr);
 echo "<hr><hr><h3> String Function => substr()</h3>";
 echo substr($str, 13);
@@ -31,9 +31,9 @@ $age = 36;
 $city = "Rasht";
 printf("%s is %u years old and live in %s .", $name, $age, $city);
 echo "<hr><hr><h3> String Function => Camel Case</h3>";
-$str = "iN the nAme of god";
-function strToCamel(string $str):string
-{
-    return lcfirst(str_replace(" ", null, ucwords(strtolower($str))));
-}
-echo strToCamel($str);
+// $str = "iN the nAme of god";
+// function strToCamel(string $str):string
+// {
+//     return lcfirst(str_replace(" ", null, ucwords(strtolower($str))));
+// }
+// echo strToCamel($str);
