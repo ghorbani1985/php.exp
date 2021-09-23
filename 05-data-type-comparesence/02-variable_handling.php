@@ -1,0 +1,81 @@
+<?php
+echo "<h3> Variable Handling </h3>";
+echo "<h3> Variable Handling => is_array() </h3>";
+$isArray = ["mohsen","edwin"];
+if (is_array($isArray)) {
+    echo "متغییر آرایه است";
+} else {
+    echo "متغییر آرایه نیست";
+}
+echo "<hr><hr><h3> Variable Handling => is_dir() </h3>";
+var_dump(is_dir("05-data-type-comparesence"));
+var_dump(is_dir('..'));
+echo "<hr><hr><h3> Variable Handling => is_int() </h3>";
+echo is_int(40);
+echo "<hr><hr><h3> Variable Handling => is_nan() </h3>";
+var_dump(is_nan(NAN));
+echo "<hr><hr><h3> Variable Handling => is_bool() </h3>";
+echo is_bool(true);
+echo "<hr><hr><h3> Variable Handling => is_file() </h3>";
+echo is_file("02-variable_handling.php");
+echo "<hr><hr><h3> Variable Handling => is_link() </h3>";
+var_dump(is_link("02-variable_handling.php"));
+echo "<hr><hr><h3> Variable Handling => is_long() </h3>";
+var_dump(is_long(20));
+echo "<hr><hr><h3> Variable Handling => is_null() </h3>";
+echo is_null(null);
+echo "<hr><hr><h3> Variable Handling => is_float() </h3>";
+echo is_float(78.998);
+echo "<hr><hr><h3> Variable Handling => is_double() </h3>";
+echo is_double(548.9);
+echo "<hr><hr><h3> Variable Handling => is_finite() </h3>";
+echo is_finite(9980077654433);
+echo "<hr><hr><h3> Variable Handling => is_object() </h3>";
+$arryToObject = new stdClass($isArray);
+var_dump(is_object($arryToObject));
+echo "<hr><hr><h3> Variable Handling => is_scalar() </h3>";
+var_dump(is_scalar(3.14));
+echo "<hr><hr><h3> Variable Handling => is_string() </h3>";
+echo is_string("محسن");
+echo "<hr><hr><h3> Variable Handling => is_integer() </h3>";
+echo is_integer(96);
+echo "<hr><hr><h3> Variable Handling => is_numeric() </h3>";
+echo is_numeric(543);
+echo "<hr><hr><h3> Variable Handling => is_callable() </h3>";
+function someFunction()
+{
+}
+$functionVariable = 'someFunction';
+var_dump(is_callable($functionVariable, false, $callable_name));
+echo "<hr><hr><h3> Variable Handling => is_infinite() </h3>";
+var_dump(is_infinite(log(0))) ;
+echo "<hr><hr><h3> Variable Handling => is_iterable() </h3>";
+var_dump(is_iterable($isArray));
+echo "<hr><hr><h3> Variable Handling => is_readable() </h3>";
+var_dump(is_readable("02-variable_handling.php"));
+echo "<hr><hr><h3> Variable Handling => is_resource() </h3>";
+var_dump(is_resource(tmpfile()));
+echo "<hr><hr><h3> Variable Handling => is_writable() </h3>";
+var_dump(is_writable("02-variable_handling.php"));
+echo "<hr><hr><h3> Variable Handling => is_countable() </h3>";
+var_dump(is_countable($isArray));
+echo "<hr><hr><h3> Variable Handling => is_writeable() </h3>";
+var_dump(is_writeable("02-variable_handling.php"));
+echo "<hr><hr><h3> Variable Handling => is_executable() </h3>";
+var_dump(is_executable("02-variable_handling.php"));
+echo "<hr><hr><h3> Variable Handling => is_soap_fault() </h3>";
+//var_dump(is_soap_fault($arryToObject));
+echo "<hr><hr><h3> Variable Handling => is_subclass_of() </h3>";
+//var_dump(is_subclass_of());
+echo "<hr><hr><h3> Variable Handling => is_uploaded_file() </h3>";
+var_dump(is_uploaded_file("02-variable_handling.php"));
+echo "<hr><hr><h3> Variable Handling => is_uploaded_file() </h3>";
+var_dump(is_uploaded_file("02-variable_handling.php"));
+echo "<hr><hr><h3> Variable Handling => is_uploaded_file() </h3>";
+echo intval(675) . "<br>";
+echo intval("mohsen");
+echo "<hr><hr><h3> Variable Handling => serialize() </h3>";
+$serializeArray = serialize($isArray);
+echo $serializeArray;
+echo "<hr><hr><h3> Variable Handling => unserialize() </h3>";
+var_dump(unserialize($serializeArray));

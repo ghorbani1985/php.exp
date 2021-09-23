@@ -156,4 +156,45 @@ echo "<hr><hr><h3> String Function => strtr()</h3>";
 $strng1 = "Hiy! Guud Mohneng";
 $from =  "yuhe";
 $to = "eori";
-    echo strtr($strng1, $from, $to);
+echo strtr($strng1, $from, $to);
+echo "<hr><hr><h3> String Function => str_getcsv()</h3>";
+$file = array_map('str_getcsv', file('data.csv'));
+print_r($file);
+echo "<hr><hr><h3> String Function => str_ireplace()</h3>";
+echo str_ireplace("mohsen", "mohsen ghorbani", "ghorbani mohsen");
+echo "<hr><hr><h3> String Function => str_repeat()</h3>";
+echo str_repeat("edwin ", 8);
+echo "<hr><hr><h3> String Function => str_rot13()</h3>";
+echo str_rot13("mohsen");
+echo "<hr><hr><h3> String Function => str_split()</h3>";
+print_r(str_split("mohsen ghorbani edwin"));
+echo "<hr><hr><h3> String Function => strip_tags()</h3>";
+echo strip_tags("mohsen <i><b>ghorbani</b></i>", "<i>");
+echo "<hr><hr><h3> String Function => str_word_count()</h3>";
+echo "'mohsen ghorbani edwin' are ".str_word_count("mohsen ghorbani edwin") . " words";
+echo "<hr><hr><h3> String Function => substr()</h3>";
+echo "'mohsen ghorbani edwin' >>> ".substr("mohsen ghorbani edwin", 5) . "<br>";
+echo "'mohsen ghorbani edwin' >>> ".substr("mohsen ghorbani edwin", -5);
+echo "<hr><hr><h3> String Function => substr_compare()</h3>";
+/*
+Return 0 - If both the given strings are equal.
+Return < 0 - If $main_str (from start position) is less than $str.
+Return > 0 - If $main _str (from start position) is greater than $str.
+*/
+// both strings are equal from position 0 to 4.
+echo substr_compare("Hello javaTpoint", "Hello", 0, 4). "</br>";
+// second string is not found between 6 to 10 position, because by default it is case-sensitive.
+   echo substr_compare("Hello javaTpoint", "JAVATPOINT", 6, 10). "</br>";
+   //As Hello is present in the string, but not found between 5 to 14 range.
+   echo substr_compare("Hello javaTpoint", "Hello", 5, 14). "</br>";
+echo "<hr><hr><h3> String Function => substr_count()</h3>";
+echo substr_count("edwin mohsen edwin ghorbani edwin ", "edwin");
+echo "<hr><hr><h3> String Function => ucfirst()</h3>";
+echo "mohsen >>> ".ucfirst("mohsen");
+echo "<hr><hr><h3> String Function => ucwords()</h3>";
+echo "mohsen ghorbani edwin >>> ".ucwords("mohsen ghorbani edwin");
+echo "<hr><hr><h3> String Function => wordwrap()</h3>";
+$strinn1 = "An example of the wordwrap() function to break the string";
+$width = 10;
+$break = "</br>";
+echo wordwrap($strinn1, $width, $break);
