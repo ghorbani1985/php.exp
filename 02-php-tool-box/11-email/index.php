@@ -32,41 +32,52 @@
 
 			<form class="contact1-form validate-form" action="proccess.php" method="POST">
 				<span class="contact1-form-title">
-					Get in touch
+					پیام خود را ارسال نمایید
 				</span>
 
 				<div class="wrap-input1 validate-input" data-validate = "Name is required">
-					<input class="input1" type="text" name="name" placeholder="Name">
+					<input class="input1" type="text" name="name" placeholder="لطفا نام خود را وارد نمایید">
 					<span class="shadow-input1"></span>
 				</div>
 
 				<div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-					<input class="input1" type="text" name="email" placeholder="Email">
+					<input class="input1" type="text" name="email" placeholder="لطفا ایمیل خود را وارد نمایید">
 					<span class="shadow-input1"></span>
 				</div>
 
 				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
-					<input class="input1" type="text" name="subject" placeholder="Subject">
+					<select name="contactSection" class="input1">
+					<option value="fani">-----</option>
+					<option value="fani">فنی</option>
+					<option value="mali">مالی</option>
+					<option value="manager">مدیریت</option>
+					<option value="support">پشتیبانی</option>
+					</select>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
+					<input class="input1" type="text" name="subject" placeholder="لطفا موضوع پیام خود را وارد نمایید">
 					<span class="shadow-input1"></span>
 				</div>
 
 				<div class="wrap-input1 validate-input" data-validate = "Message is required">
-					<textarea class="input1" name="message" placeholder="Message"></textarea>
+					<textarea class="input1" name="message" placeholder="لطفا پیام خود را وارد نمایید"></textarea>
 					<span class="shadow-input1"></span>
 				</div>
 
 				<div class="container-contact1-form-btn">
 					<button class="contact1-form-btn">
+						<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
 						<span>
-							Send Email
-							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+							ارسال پیام
 						</span>
 					</button>
 				</div>
 			</form>
 			<?php
             if (isset($_SESSION["msg"])) {
-                echo $_SESSION["name"]. " عزیز <br>".$_SESSION["msg"] ;
+                echo $_SESSION["name"]. " عزیز پیام شما به بخش" .$_SESSION["contactSection"] ." ارسال گردید <br>".$_SESSION["msg"] ;
             }
                 unset($_SESSION["msg"]);
             ?>

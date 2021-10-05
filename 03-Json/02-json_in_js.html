@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Sample</title>
+</head>
+<body>
+    <div id="user"></div>
+    <script>
+        var userDataStr = '{"name":"mohsenghorbani","favcolor":"purple","age":36,"gender":"male","isSingle":true,"success":null,"friends":["amin","babak","kaveh"]}';
+        var userDivTag = document.getElementById('user');
+        //Convert String to Object
+        var userDataObj = JSON.parse(userDataStr);
+        userDataObj['age'] = 20;
+        for (var key in userDataObj) {
+           userDivTag.innerHTML += "<div style='color:"+userDataObj['favcolor'] +"'>" + key + " : " + userDataObj[key] +"</div>";
+        }
+        //Convert JsObject to JsonString
+        var userDataStrAgain = JSON.stringify(userDataObj);
+        console.log(userDataStrAgain)
+    </script>
+</body>
+</html>
