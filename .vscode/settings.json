@@ -1,5 +1,9 @@
 {
     "files.insertFinalNewline": true,
     "json.schemas": [
+    ],
+    "cSpell.words": [
+        "fullname",
+        "varchar"
     ]
 }
